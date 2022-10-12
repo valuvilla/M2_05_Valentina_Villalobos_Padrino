@@ -17,32 +17,55 @@ else:
     else:
          print("valores no ordenados")
 
-valores=[]
-print("Introduzca valores")
-for i in range(3):
-    valores.append(input("valor: ")) 
-print(valores)    
+import sys
 
-if valores[0]==0:
-      print("¡el primer número intoducido es 0")
-else:
-    if valores[0]<=valores[1]<=valores[2]:
-     print("valores ordenados")
-    else:
-      print("valores no ordenados")
+valores=[]
+def Evaluación_lista(valores):
+    while True:
+
+        print ("Introduzca valores")
+        
+        for i in range(3):
+             valores.append(input("valor: "))
+        
+        try:
+             valores[0]=int(valores[0])
+             valores[1]=int(valores[1])
+             valores[2]=int(valores[2])
+        except:
+            print("Valor no valido", file=sys.stderr)     
+            pass
+        else:
+            if valores[0]==0:
+                print("¡el primer número intoducido es 0")
+                break
+            else:
+                if int(valores[0])<=int(valores[1])<=int(valores[2]):
+                    print("valores ordenados")
+                    break
+                else:
+                    print("valores no ordenados")
+                    break
+        sys.exit()  
+
+print(Evaluación_lista(valores))        
                 
 
 
-print("vamos a contar el número de veces que aparece la letra A")
-veces=0
-while True:
-    palabra=input("Introduce palabras: ")
-    for letra in palabra:
-        if "a" == letra:
-            veces+=1
-    if "." in palabra:
-        break
-print("La letra A ha aparecido "+ str(veces)+ " veces")   
+inicio=print("vamos a contar el número de veces que aparece la letra A")
+def letra_A(inicio):
+    veces=0
+    while True:
+        palabra=input("Introduce palabras: ")
+        for letra in palabra:
+            if "a" == letra:
+                veces+=1
+        if "." in palabra:
+            break
+
+    return "La letra A ha aparecido "+ str(veces)+ " veces"
+
+print(letra_A(inicio))
 
 lista_palabras=[]
 for j in range(1,4):
