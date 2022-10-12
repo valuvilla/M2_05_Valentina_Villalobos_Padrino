@@ -46,4 +46,4 @@ lista_palabras=[]
 for j in range(5):
     lista_palabras.append(input("Palabra: "))
 for x in lista_palabras:
-    print(len(lista_palabras))
+    print(lista_palabras)
