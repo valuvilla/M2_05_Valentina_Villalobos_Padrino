@@ -1,3 +1,6 @@
+from itertools import count
+
+
 print("introduce tres valores: ")
 valor1=int(input("Valor1: "))
 valor2=int(input("Valor2: "))
@@ -42,8 +45,20 @@ while True:
 print("La letra A ha aparecido "+ str(veces)+ " veces")   
 
 lista_palabras=[]
-
-for j in range(5):
+for j in range(1,4):
     lista_palabras.append(input("Palabra: "))
-for x in lista_palabras:
-    print(lista_palabras)
+    
+#print(lista_palabras)
+
+def palabra_mas_larga(lista_palabras):
+    longitudes=[]
+    for x in lista_palabras:
+        longitudes.append((len(x), x))
+  
+    longitudes.sort()  
+    
+
+    return 'la pabra más larga de la lista es '+str(longitudes[-1][1])+' con '+str(longitudes[-1][0])+' caracteres'
+    
+print(palabra_mas_larga(lista_palabras))
+    
