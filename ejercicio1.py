@@ -10,7 +10,8 @@ def valor(valor):
             pass
         else:
             break
-        sys.exit()
+            sys.exit()
+        
     return valor
 
 
