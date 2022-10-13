@@ -1,6 +1,6 @@
-from itertools import count
 
 
+#DEfinimos las variables a utilizar
 print("introduce tres valores: ")
 valor1=int(input("Valor1: "))
 valor2=int(input("Valor2: "))
@@ -8,9 +8,10 @@ valor3=int(input("Valor3: "))
 valor=valor1,valor2,valor3
 print(valor)
 
-
+#Mediante el uso de condicionales, evaluamos los datos aportados
+#Nos da error si introducimos el 0
 if valor1==0:
-    print("¡el primer número intoducido es 0")
+    raise ValueError("¡el primer número intoducido es 0")
 else:
     if valor1<=valor2<=valor3:
         print("valores ordenados")
@@ -24,7 +25,7 @@ def Evaluación_lista(valores):
     while True:
 
         print ("Introduzca valores")
-        
+
         for i in range(3):
              valores.append(input("valor: "))
         
@@ -37,8 +38,8 @@ def Evaluación_lista(valores):
             pass
         else:
             if valores[0]==0:
-                print("¡el primer número intoducido es 0")
-                break
+                raise ValueError("¡el primer número intoducido es 0")
+    
             else:
                 if int(valores[0])<=int(valores[1])<=int(valores[2]):
                     print("valores ordenados")
@@ -52,8 +53,8 @@ print(Evaluación_lista(valores))
                 
 
 
-inicio=print("vamos a contar el número de veces que aparece la letra A")
-def letra_A(inicio):
+invitación=print("vamos a contar el número de veces que aparece la letra A")
+def letra_A(invitación):
     veces=0
     while True:
         palabra=input("Introduce palabras: ")
@@ -65,10 +66,13 @@ def letra_A(inicio):
 
     return "La letra A ha aparecido "+ str(veces)+ " veces"
 
-print(letra_A(inicio))
+print(letra_A(invitación))
+
+print('Vamos a averiguar cual es la palabra más larga de nuestra lista')
+print('Para ello el usuario construira su propia lista')
 
 lista_palabras=[]
-for j in range(1,4):
+for j in range(4):
     lista_palabras.append(input("Palabra: "))
     
 #print(lista_palabras)
