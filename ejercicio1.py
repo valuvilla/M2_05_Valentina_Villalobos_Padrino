@@ -41,9 +41,9 @@ def Evaluación(valor):
         """  
         if valor1!=0:
             if valor1<=valor2<=valor3:
-                print("valores ordenados")
+                print("los numeros {}, {}, {} están ordenados de forma ascedente".format(valor1, valor2, valor3))
             else:
-                print("valores no ordenados")
+                print("los numeros {}, {}, {} no están ordenados de forma ascedente".format(valor1, valor2, valor3))
                
         #Al introducir el 0 en primer valor, el sistema nos dará error.        
         else:
