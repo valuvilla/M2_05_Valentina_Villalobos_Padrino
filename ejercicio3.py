@@ -1,4 +1,5 @@
 invitación=print("vamos a contar el número de veces que aparece la letra A")
+print("Recuerda que para salir del bucle, deberás pulsar el punto")
 def letra_A(invitación):
     veces=0
     while True:
@@ -7,7 +8,10 @@ def letra_A(invitación):
         #Definimos una varible
         palabra=input("Introduce palabras: ")
 
-        #Entramos un bucle for que cuente las letras
+        """
+        Entramos un bucle for que cuente las letras
+        Se saldrá del bucle cuando se dectecte un punto
+        """
         for letra in palabra:
             if "a" == letra or "A" == letra:
                 veces+=1
